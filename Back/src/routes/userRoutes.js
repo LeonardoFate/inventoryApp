@@ -1,4 +1,3 @@
-// backend/src/routes/userRoutes.js
 
 import express from 'express';
 import { getProfile, updateProfile } from '../controllers/userController.js';

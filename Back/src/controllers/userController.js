@@ -1,4 +1,4 @@
-// backend/src/controllers/userController.js
+
 
 import asyncHandler from 'express-async-handler';
 import { getUserProfile, updateUserProfile } from '../services/userService.js';

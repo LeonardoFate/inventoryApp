@@ -1,5 +1,4 @@
 
-// backend/src/server.js
 
 import app from './app.js';
 import connectDB from './config/dbConfig.js';

@@ -1,4 +1,3 @@
-// backend/src/controllers/authController.js
 
 import asyncHandler from 'express-async-handler';
 import { registerUser, loginUser } from '../services/authService.js';

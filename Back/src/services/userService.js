@@ -1,4 +1,4 @@
-// backend/src/services/userService.js
+
 
 import User from '../models/User.js';
 

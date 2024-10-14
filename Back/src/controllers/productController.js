@@ -1,4 +1,4 @@
-// backend/src/controllers/productController.js
+
 
 import asyncHandler from 'express-async-handler';
 import {

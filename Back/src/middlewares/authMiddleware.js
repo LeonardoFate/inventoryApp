@@ -1,4 +1,4 @@
-// backend/src/middlewares/authMiddleware.js
+
 
 import jwt from 'jsonwebtoken';
 import asyncHandler from 'express-async-handler';

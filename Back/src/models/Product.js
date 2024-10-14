@@ -1,4 +1,4 @@
-// backend/src/models/Product.js
+
 
 import mongoose from 'mongoose';
 

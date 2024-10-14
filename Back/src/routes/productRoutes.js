@@ -1,4 +1,3 @@
-// backend/src/routes/productRoutes.js
 
 import express from 'express';
 import {
@@ -18,7 +17,7 @@ const validateProduct = [
   check('name', 'El nombre del producto es obligatorio').notEmpty(),
   check('quantity', 'La cantidad debe ser un número entero positivo').isInt({ min: 0 }),
   check('price', 'El precio debe ser un número positivo').isFloat({ min: 0 }),
-  // Agrega más validaciones según sea necesario
+
 ];
 
 // Maneja los errores de validación
