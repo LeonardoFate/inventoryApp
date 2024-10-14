@@ -1,0 +1,32 @@
+# Node modules
+node_modules/
+
+# Archivos de entorno
+.env
+
+# Archivos de log
+logs/
+*.log
+
+# Archivos de lock de npm
+package-lock.json
+
+# Archivos temporales de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de compilación
+dist/
+build/
+
+# Tests
+coverage/
+*.test.js
+
+# Archivos de configuración de IDE
+.vscode/
+.idea/
+
+# Archivos de backups
+*.bak
+*.tmp
