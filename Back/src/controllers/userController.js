@@ -1,7 +1,5 @@
-
-
-import asyncHandler from 'express-async-handler';
-import { getUserProfile, updateUserProfile } from '../services/userService.js';
+import asyncHandler from "express-async-handler";
+import { getUserProfile, updateUserProfile } from "../services/userService.js";
 
 /**
  * @desc    Obtener perfil de usuario

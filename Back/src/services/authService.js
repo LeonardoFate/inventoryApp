@@ -1,7 +1,5 @@
-
-
-import User from '../models/User.js';
-import { generateToken } from '../utils/jwtHelper.js';
+import User from "../models/User.js";
+import { generateToken } from "../utils/jwtHelper.js";
 
 /**
  * Registrar un nuevo usuario
@@ -9,12 +7,12 @@ import { generateToken } from '../utils/jwtHelper.js';
  * @returns {Object} - Datos del usuario registrado y token
  */
 const registerUser = async (userData) => {
-  const { username, email, password } = userData;
+  const { username, email, password, role } = userData;
 
   // Verifica si el usuario ya existe
   const userExists = await User.findOne({ email });
   if (userExists) {
-    const error = new Error('El usuario ya existe');
+    const error = new Error("El usuario ya existe");
     error.status = 400;
     throw error;
   }
@@ -23,6 +21,7 @@ const registerUser = async (userData) => {
     username,
     email,
     password,
+    role: role || "user", // Establecer rol, predeterminado a 'user'
   });
 
   if (user) {
@@ -35,7 +34,7 @@ const registerUser = async (userData) => {
       token: generateToken({ id: user._id }),
     };
   } else {
-    const error = new Error('Datos de usuario inválidos');
+    const error = new Error("Datos de usuario inválidos");
     error.status = 400;
     throw error;
   }
@@ -49,10 +48,10 @@ const registerUser = async (userData) => {
 const loginUser = async (loginData) => {
   const { email, password } = loginData;
 
-  const user = await User.findOne({ email }).select('+password');
+  const user = await User.findOne({ email }).select("+password");
 
   if (!user) {
-    const error = new Error('Credenciales inválidas');
+    const error = new Error("Credenciales inválidas");
     error.status = 401;
     throw error;
   }
@@ -60,7 +59,7 @@ const loginUser = async (loginData) => {
   const isMatch = await user.matchPassword(password);
 
   if (!isMatch) {
-    const error = new Error('Credenciales inválidas');
+    const error = new Error("Credenciales inválidas");
     error.status = 401;
     throw error;
   }

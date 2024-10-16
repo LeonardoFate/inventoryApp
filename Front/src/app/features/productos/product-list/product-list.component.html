@@ -1,0 +1,46 @@
+<div class="product-list">
+  <h1 class="product-list-title">Lista de Productos</h1>
+
+  <div class="search-container">
+    <!-- Barra de búsqueda -->
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      placeholder="Buscar producto..."
+      (input)="filterProducts()"
+    />
+
+    <!-- Botón para abrir el modal -->
+    <button class="btn-add" (click)="openModal()">+</button>
+  </div>
+
+  <!-- Componente Modal -->
+  <app-product-modal
+    *ngIf="isModalOpen"
+    (addProduct)="onAddProduct($event)"
+    (closeModal)="closeModal()"
+  >
+  </app-product-modal>
+
+  <ul class="product-list-items">
+    <li *ngFor="let product of filteredProducts" class="product-item">
+      <div class="product-info">
+        <h2 class="product-name">{{ product.name }}</h2>
+        <p class="product-price">Precio: {{ product.price | currency }}</p>
+        <p class="product-stock">Stock: {{product.stock}}</p>
+
+      </div>
+      <div class="product-actions">
+        <button class="btn-details" (click)="goToProductDetails(product.id)">
+          Ver Detalles
+        </button>
+        <!-- <button class="btn-edit" (click)="editProduct(product.id)">
+          Editar
+        </button> -->
+        <button class="btn-delete" (click)="deleteProduct(product.id)">
+          Eliminar
+        </button>
+      </div>
+    </li>
+  </ul>
+</div>

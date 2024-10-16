@@ -1,0 +1,16 @@
+/* Reset de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo básico para el body */
+body {
+    font-family: Arial, sans-serif; /* Fuente de la aplicación */
+    background-color: #f4f4f4; /* Color de fondo suave */
+    color: #333; /* Color del texto */
+    line-height: 1.6; /* Altura de línea para mejor legibilidad */
+    margin: 0;
+    padding: 0;
+}

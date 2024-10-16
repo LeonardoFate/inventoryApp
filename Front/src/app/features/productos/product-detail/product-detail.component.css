@@ -1,0 +1,118 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Estilos generales del contenedor */
+  .product-detail {
+    max-width: 800px; /* Ancho máximo para pantallas grandes */
+    margin: 20px auto; /* Centramos el contenedor */
+    padding: 20px;
+    background-color: #f9f9f9; /* Fondo suave */
+    border: 1px solid #ddd; /* Borde suave */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+  }
+
+  /* Títulos */
+  h2 {
+    font-size: 2rem; /* Tamaño de fuente grande */
+    margin-bottom: 20px; /* Espaciado inferior */
+  }
+
+  /* Contenedor de información del producto */
+  .product-info {
+    margin-bottom: 20px; /* Espaciado inferior */
+  }
+
+  /* Estilos para los elementos del producto */
+  .product-item {
+    display: flex;
+    margin-bottom: 10px;
+    overflow: hidden; /* Evitar que el contenido se desborde */
+  }
+
+
+  /* Etiquetas y valores */
+  .label {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #333;
+    flex: 0 0 120px; /* Fijo el ancho de la etiqueta */
+  }
+
+  .value {
+    color: #555;
+    flex: 1; /* Permite que el valor ocupe el espacio restante */
+    overflow-wrap: break-word; /* Permite el cambio de línea en palabras largas */
+    word-wrap: break-word; /* Para compatibilidad con navegadores más antiguos */
+    overflow: hidden; /* Evitar que el contenido se desborde */
+    white-space: normal; /* Permite el salto de línea */
+  }
+
+  /* Mensaje cuando no hay producto */
+  .no-product {
+    color: #f44336; /* Rojo para indicar error */
+    font-size: 1.2rem; /* Tamaño de fuente más grande */
+  }
+
+  /* Contenedor de acciones del producto */
+  .product-actions {
+    display: flex; /* Usamos Flexbox para alinear botones */
+    gap: 10px; /* Espaciado entre botones */
+  }
+
+  /* Estilos para los botones */
+  button {
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 1rem; /* Tamaño de fuente del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor tipo puntero */
+    transition: background-color 0.3s ease; /* Transición suave para el fondo */
+  }
+
+  /* Estilos para el botón de editar */
+  .btn-edit {
+    background-color: #4CAF50; /* Verde para el botón de editar */
+    color: white; /* Color del texto */
+  }
+
+  /* Hover para el botón de editar */
+  .btn-edit:hover {
+    background-color: #45a049; /* Color de fondo más oscuro al pasar el ratón */
+  }
+
+  /* Estilos para el botón de cancelar */
+  .btn-cancel {
+    background-color: #f44336; /* Rojo para el botón de cancelar */
+    color: white; /* Color del texto */
+  }
+
+  /* Hover para el botón de cancelar */
+  .btn-cancel:hover {
+    background-color: #e53935; /* Color de fondo más oscuro al pasar el ratón */
+  }
+
+  /* Media Queries para responsividad */
+  @media (max-width: 600px) {
+    .product-detail {
+      padding: 15px; /* Ajustamos el padding para pantallas pequeñas */
+    }
+
+    h2 {
+      font-size: 1.5rem; /* Tamaño de fuente más pequeño para el título */
+    }
+
+    .label,
+    .value {
+      font-size: 0.9rem; /* Tamaño de fuente más pequeño para etiquetas y valores */
+    }
+
+    button {
+      padding: 8px 16px; /* Ajustamos el padding de los botones */
+      font-size: 0.9rem; /* Tamaño de fuente más pequeño para botones */
+    }
+  }

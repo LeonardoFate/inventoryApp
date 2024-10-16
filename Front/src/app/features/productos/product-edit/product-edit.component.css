@@ -1,0 +1,59 @@
+/* Estilo general del formulario */
+form {
+    max-width: 400px; /* Limita el ancho del formulario */
+    margin: 20px auto; /* Centra el formulario en la página */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    background-color: #f9f9f9; /* Color de fondo suave */
+  }
+
+  /* Estilos para los elementos de entrada */
+  input {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 10px; /* Espaciado interno */
+    margin: 10px 0; /* Espaciado entre campos */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+    transition: border-color 0.3s; /* Transición suave para el borde */
+  }
+
+  /* Cambia el color del borde al enfocar el campo de entrada */
+  input:focus {
+    border-color: #007bff; /* Color azul claro al enfocar */
+    outline: none; /* Elimina el borde por defecto */
+  }
+
+  /* Estilo para las etiquetas */
+  label {
+    font-weight: bold; /* Negrita para las etiquetas */
+    margin-top: 10px; /* Espaciado arriba */
+    display: block; /* Hace que las etiquetas se comporten como bloques */
+  }
+
+  /* Estilo para los botones */
+  button {
+    width: 48%; /* Botones ocupan casi todo el ancho */
+    padding: 10px; /* Espaciado interno */
+    margin: 10px 1%; /* Espaciado entre botones */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    color: #fff; /* Color del texto */
+    font-weight: bold; /* Negrita para el texto */
+  }
+
+  /* Color y fondo para el botón de envío */
+  button[type="submit"] {
+    background-color: #007bff; /* Color de fondo azul */
+  }
+
+  /* Color y fondo para el botón de cancelación */
+  button[type="button"] {
+    background-color: #dc3545; /* Color de fondo rojo */
+  }
+
+  /* Cambiar el fondo del botón al pasar el ratón */
+  button:hover {
+    opacity: 0.9; /* Efecto de opacidad al pasar el ratón */
+  }

@@ -1,13 +1,11 @@
-
-
-import asyncHandler from 'express-async-handler';
+import asyncHandler from "express-async-handler";
 import {
   getAllProducts,
   getProductById,
   createProduct,
   updateProduct,
   deleteProduct,
-} from '../services/productService.js';
+} from "../services/productService.js";
 
 /**
  * @desc    Obtener todos los productos
@@ -32,7 +30,7 @@ const getProduct = asyncHandler(async (req, res) => {
   const product = await getProductById(req.params.id);
   if (!product) {
     res.status(404);
-    throw new Error('Producto no encontrado');
+    throw new Error("Producto no encontrado");
   }
 
   res.status(200).json({
@@ -63,7 +61,7 @@ const updateExistingProduct = asyncHandler(async (req, res) => {
   const product = await updateProduct(req.params.id, req.body);
   if (!product) {
     res.status(404);
-    throw new Error('Producto no encontrado');
+    throw new Error("Producto no encontrado");
   }
 
   res.status(200).json({
@@ -81,12 +79,12 @@ const deleteExistingProduct = asyncHandler(async (req, res) => {
   const product = await deleteProduct(req.params.id);
   if (!product) {
     res.status(404);
-    throw new Error('Producto no encontrado');
+    throw new Error("Producto no encontrado");
   }
 
   res.status(200).json({
     success: true,
-    message: 'Producto eliminado exitosamente',
+    message: "Producto eliminado exitosamente",
   });
 });
 

@@ -1,0 +1,24 @@
+<div class="product-detail">
+    <h2>Detalles del Producto</h2>
+    <div *ngIf="product" class="product-info">
+      <div class="product-item">
+        <span class="label">Nombre:</span>
+        <span class="value">{{ product.name }}</span>
+      </div>
+      <div class="product-item">
+        <span class="label">Descripción:</span>
+        <span class="value">{{ product.detail }}</span>
+      </div>
+      <div class="product-item">
+        <span class="label">Stock:</span>
+        <span class="value">{{ product.stock }}</span>
+      </div>
+      <div class="product-actions">
+        <button (click)="router.navigate(['/product-edit', productId])" class="btn-edit">Editar</button>
+        <button (click)="router.navigate(['/product-list'])" class="btn-cancel">Salir</button>
+      </div>
+    </div>
+    <div *ngIf="!product" class="no-product">
+      <p>No se encontró información del producto.</p>
+    </div>
+  </div>

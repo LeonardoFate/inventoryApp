@@ -1,6 +1,5 @@
-
-import asyncHandler from 'express-async-handler';
-import { registerUser, loginUser } from '../services/authService.js';
+import asyncHandler from "express-async-handler";
+import { registerUser, loginUser } from "../services/authService.js";
 
 /**
  * @desc    Registrar un nuevo usuario

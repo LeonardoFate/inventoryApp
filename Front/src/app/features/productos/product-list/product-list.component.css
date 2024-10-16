@@ -1,0 +1,158 @@
+/* Estilos generales */
+.product-list {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  }
+
+  .product-list-title {
+    text-align: center;
+    font-size: 28px;
+    color: #34495e;
+    margin-bottom: 20px;
+  }
+
+  .product-list-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .product-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .product-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .product-info {
+    flex-grow: 1;
+  }
+
+  .product-name {
+    font-size: 20px;
+    margin: 0;
+    color: #2c3e50;
+  }
+
+  .product-price {
+    font-size: 16px;
+    color: #2ecc71;
+    margin-top: 5px;
+  }
+
+  .product-actions {
+    display: flex;
+    gap: 10px;
+  }
+
+  /* Estilos de botones */
+  button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Botón de Detalles */
+  .btn-details {
+    background-color: #3498db;
+    color: white;
+  }
+
+  .btn-details:hover {
+    background-color: #2980b9;
+  }
+
+  /* Botón de Editar */
+  .btn-edit {
+    background-color: #e67e22;
+    color: white;
+  }
+
+  .btn-edit:hover {
+    background-color: #d35400;
+  }
+
+  /* Botón de Eliminar */
+  .btn-delete {
+    background-color: #ff0000;
+    color: white;
+  }
+
+  .btn-delete:hover {
+    background-color: #7c0202;
+  }
+
+  /* Estilos para la barra de búsqueda */
+  .search-container {
+    display: flex; /* Activa el flexbox */
+    justify-content: space-between; /* Espaciado entre elementos */
+    align-items: center; /* Centra verticalmente */
+    padding: 10px; /* Añade un poco de espacio interno */
+    border: 1px solid #ccc; /* Añade un borde (opcional) */
+    border-radius: 5px; /* Bordes redondeados (opcional) */
+    margin-bottom: 17px;
+  }
+
+  .search-container input {
+    flex: 1; /* Permite que el input ocupe el espacio disponible */
+    margin-right: 10px; /* Espacio entre el input y el botón */
+    padding: 8px; /* Espaciado interno del input */
+  }
+
+  /* Botón para agregar productos */
+  .btn-add {
+    padding: 8px 12px; /* Espaciado interno del botón */
+    background-color: #28a745; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  }
+
+  .btn-add:hover {
+    background-color: #218838; /* Color de fondo en hover */
+  }
+
+  /* Estilo para el input */
+  input {
+    padding: 10px;
+    width: 300px; /* Ancho de la barra de búsqueda */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+  }
+
+  /* Estilos para dispositivos móviles */
+  @media (max-width: 600px) {
+    .product-item {
+      flex-direction: column; /* Cambia la dirección del flex para una mejor visualización en móviles */
+      align-items: flex-start; /* Alinea los elementos al inicio */
+    }
+
+    .product-actions {
+      justify-content: space-between; /* Espaciado entre los botones */
+      width: 100%; /* Ocupar todo el ancho disponible */
+    }
+
+    button {
+      width: 100%; /* Botones ocupan todo el ancho en móviles */
+      margin-bottom: 10px; /* Espaciado entre botones */
+    }
+  }
