@@ -1,32 +1,22 @@
 # Node modules
 node_modules/
 
-# Archivos de entorno
+# Environment variables
 .env
 
-# Archivos de log
-logs/
-*.log
+# Logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
 
-# Archivos de lock de npm
-package-lock.json
-
-# Archivos temporales de sistema
+# OS-specific files
 .DS_Store
 Thumbs.db
 
-# Archivos de compilación
-dist/
-build/
-
-# Tests
-coverage/
-*.test.js
-
-# Archivos de configuración de IDE
+# Editor directories and files
 .vscode/
 .idea/
 
-# Archivos de backups
-*.bak
-*.tmp
+# Build files
+/build
+/dist
